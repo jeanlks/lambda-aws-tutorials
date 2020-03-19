@@ -1,0 +1,22 @@
+{
+  "name": "lambda-aws-tutorials",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeanlks/lambda-aws-tutorials.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeanlks/lambda-aws-tutorials/issues"
+  },
+  "homepage": "https://github.com/jeanlks/lambda-aws-tutorials#readme",
+  "dependencies": {
+    "aws-xray-sdk": "^2.5.0"
+  }
+}
