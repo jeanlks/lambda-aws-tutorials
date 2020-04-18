@@ -1,0 +1,23 @@
+{
+  "name": "hello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "scheduleHandler.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dynamodb-toolbox": "^0.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^6.1.4",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

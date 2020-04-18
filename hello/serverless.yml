@@ -36,8 +36,12 @@ functions:
             method: post
             cors: true
   schedule:
-    handler: scheduleHandler.hello
+    handler: scheduleHandler.handler
     memorySize: 128
+    events:
+      - http:
+          path: schedule
+          method: get
   verify-token:
     handler: auth/authorize.handler
     memorySize: 128
@@ -68,5 +72,14 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
+custom:
+  dynamodb:
+    stages:
+      - test
+    start:
+      port: 8000
+      inMemory: true
+      migrate: true #
 plugins:
   - serverless-offline
+  - serverless-dynamodb-local
