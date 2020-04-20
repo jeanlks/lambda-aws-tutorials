@@ -1,0 +1,20 @@
+service: sqs
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: sa-east-1
+  
+functions:
+  sender:
+    handler: src/sqs-sender.handler
+    events:
+      - http:
+          path: v1/sender
+          method: post
+      - schedule:
+          rate: cron(*/2 * * * ? *)
+          enabled: true
+  receiver:
+    handler: src/sqs-receiver.handler

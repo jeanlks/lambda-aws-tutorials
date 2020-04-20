@@ -5,7 +5,6 @@ provider:
   runtime: nodejs12.x
   region: sa-east-1
   environment:
-    JWT_SECRET: ${self:service}-${opt:stage, self:provider.stage}
     USER_TABLE: ${self:service}-user-${opt:stage, self:provider.stage}
   iamRoleStatements:
     - Effect: "Allow"
@@ -75,11 +74,11 @@ resources:
 custom:
   dynamodb:
     stages:
-      - test
+      - local
     start:
       port: 8000
       inMemory: true
-      migrate: true #
+      migrate: true 
 plugins:
   - serverless-offline
   - serverless-dynamodb-local

@@ -6,18 +6,24 @@
   "directories": {
     "lib": "lib"
   },
+  "scripts": {
+    "start": "sls offline start --stage=local",
+    "debug": "node --inspect ./node_modules/.bin/serverless offline -s local",
+    "test": "mocha"
+  },
   "dependencies": {
+    "async": "^3.2.0",
+    "async-redis": "^1.1.7",
     "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
     "dynamodb-toolbox": "^0.1.0",
     "jsonwebtoken": "^8.5.1",
+    "redis": "^3.0.2",
     "serverless-dynamodb-local": "^0.2.39",
     "serverless-offline": "^6.1.4",
     "uuid": "^7.0.3"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "",
   "license": "ISC"
 }

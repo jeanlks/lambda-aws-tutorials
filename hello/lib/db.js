@@ -43,8 +43,6 @@ const createDbUser = async props => {
     createdAt: new Date()
   });
 
-  console.log("create user with params", params);
-
   const response = await docClient.put(params).promise();
   return User.parse(response);
 };
