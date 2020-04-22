@@ -6,6 +6,7 @@ phases:
       - echo Installing source NPM dependencies...
       - cd hello
       - npm install
+      - npm install -g serverless
   build:
     commands:
       - sls deploy
