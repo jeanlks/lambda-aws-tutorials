@@ -24,9 +24,9 @@ const User = new Model("User", {
 
 // INIT AWS
 AWS.config.update({
-  //region: "sa-east-1"
-  region: 'localhost',
-  endpoint: 'http://localhost:8000'
+  region: "sa-east-1"
+  //region: 'localhost',
+  //endpoint: 'http://localhost:8000'
 });
 
 const docClient = new AWS.DynamoDB.DocumentClient();

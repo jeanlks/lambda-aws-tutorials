@@ -9,12 +9,14 @@ provider:
 functions:
   sender:
     handler: src/sqs-sender.handler
+    memorySize: 128
     events:
-      - http:
-          path: v1/sender
-          method: post
+      #- http:
+      #    path: v1/sender
+      #    method: post
       - schedule:
           rate: cron(*/2 * * * ? *)
-          enabled: true
+          enabled: false
   receiver:
     handler: src/sqs-receiver.handler
+    memorySize: 128
