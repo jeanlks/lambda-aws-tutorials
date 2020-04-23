@@ -12,4 +12,4 @@ phases:
       - sls deploy --stage=$STAGE
 cache:
   paths:
-    - '*/**/node_modules/**/*'
+    - 'hello/node_modules/**/*'
