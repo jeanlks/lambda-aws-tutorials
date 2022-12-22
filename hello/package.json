@@ -17,7 +17,7 @@
     "bcryptjs": "^2.4.3",
     "bluebird": "^3.7.2",
     "dynamodb-toolbox": "^0.1.0",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "redis": "^3.0.2",
     "serverless-dynamodb-local": "^0.2.39",
     "serverless-offline": "^6.1.4",
